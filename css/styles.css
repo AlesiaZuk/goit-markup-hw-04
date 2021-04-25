@@ -27,6 +27,7 @@
   --footer-padding: 60px;
   --footer-logo-margin: 20px;
   --footer-list-margin: 9px;
+  --footer-container-margin: 70px;
   --button-margin: 8px;
   --portfolio-card-title-margin: 4px;
   --icon-margin: 16px;
@@ -270,6 +271,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
 
   width: 270px;
   height: 120px;
@@ -358,16 +360,18 @@ li {
   margin-top: var(--element-padding);
   flex-basis: calc((100% - 120px) / 4);
 
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
   text-align: center;
 }
 
 .lower-card {
   padding-top: var(--element-padding);
   padding-bottom: var(--element-padding);
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  padding-left: var(--header-padding);
+  padding-right: var(--header-padding);
 
   background: var(--primary-background);
 }
@@ -390,8 +394,6 @@ li {
 
 .team-contact {
   display: inline-flex;
-  padding-left: var(--header-padding);
-  padding-right: var(--header-padding);
 }
 
 .team-contact .item:not(:last-child) {
@@ -471,7 +473,7 @@ li {
   align-items: baseline;
 }
 .address {
-  flex-basis: calc((100% - 90px) / 3);
+  margin-right: var(--footer-container-margin);
 }
 .logo.inverse {
   display: block;
@@ -514,10 +516,6 @@ li {
 
 .footer .link:not(:last-child) {
   margin-bottom: var(--footer-list-margin);
-}
-
-.join {
-  flex-basis: calc((100% - 90px) / 3);
 }
 
 .footer-title {
@@ -621,7 +619,8 @@ li {
   display: block;
 }
 
-.link-portfolio:hover {
+.link-portfolio:hover,
+.link-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
